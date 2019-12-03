@@ -18,8 +18,8 @@
 /* basic elements */
 
 @import 'partials/_colors.scss';
+@import 'partials/_type.scss';
 @import 'partials/_background.scss';
-// @import 'partials/_type.scss';
 
 html,
 body,
@@ -63,7 +63,7 @@ body,
 }
 .summary {
 	grid-area: summary;
-	height: calc(70vh - 4em);
+	height: calc(70vh - 5em);
 }
 .preamble {
 	grid-area: preamble;
@@ -93,12 +93,15 @@ $box-margin: 2em;
 
 .intro > header > h2 {
 	background-color: $color-3;
-	width: 38vw;
+	width: 50vw;
+	height: 10vh;
 	padding-left: $side-margin;
 }
 
 .summary {
 	margin: 1em;
+	width: 45vw;
+	height: 55vh;
 	background-color: $color-2;
 	padding: $box-margin;
 }
@@ -113,7 +116,7 @@ $box-margin: 2em;
 	padding: $box-margin;
 	width: 26vw;
 	margin-top: 25vw;
-	margin-left: 10vw;
+	margin-left: 5vw;
 }
 
 .participation {
@@ -172,6 +175,6 @@ footer {
 
 // }
 
-// NOT MOBILE - 600px or higher
-@media screen and (min-width: 600px) {
+// NOT MOBILE - 770px or higher
+@media screen and (min-width: 770px) {
 }
