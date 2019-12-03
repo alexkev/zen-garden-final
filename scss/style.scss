@@ -7,16 +7,146 @@
 
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
+/*************************************************
+*
+* 					AUTHORS 
+* Erik Martinez - https://github.com/erikjmartinez
+* Alex - http://github.com/alexkev
+* Kelsie - https://github.com/kellodust
+*
+**************************************************/
 /* basic elements */
 
-@import 'partials/_background.scss';
-@import 'partials/_type.scss';
 @import 'partials/_colors.scss';
+@import 'partials/_background.scss';
+// @import 'partials/_type.scss';
 
 html,
-body {
-	margin: 0;
-	padding: 0;
+body,
+.page-wrapper {
+	margin: 0px;
+	padding: 0px;
+}
+
+.intro,
+.intro > header,
+.main {
+	display: contents;
+}
+
+// layout
+.page-wrapper {
+	display: grid;
+	grid-template-columns: 45% 10% 45%;
+	grid-template-areas:
+		'. title title'
+		'subtitle subtitle subtitle'
+		'. summary summary'
+		'preamble  explanation explanation'
+		'preamble  explanation explanation'
+		'. explanation explanation'
+		'participation benefits benefits'
+		'participation benefits benefits'
+		'participation benefits benefits'
+		'requirements requirements sidebar'
+		'requirements requirements sidebar'
+		'requirements requirements footer';
+}
+
+.intro > header > h1 {
+	grid-area: title;
+	height: calc(15vh - 2em);
+}
+.intro > header > h2 {
+	grid-area: subtitle;
+	height: calc(15vh - 2em);
+}
+.summary {
+	grid-area: summary;
+	height: calc(70vh - 4em);
+}
+.preamble {
+	grid-area: preamble;
+}
+.explanation {
+	grid-area: explanation;
+}
+.participation {
+	grid-area: participation;
+}
+.benefits {
+	grid-area: benefits;
+}
+.requirements {
+	grid-area: requirements;
+}
+.sidebar {
+	grid-area: sidebar;
+}
+footer {
+	grid-area: footer;
+}
+
+// postion
+$side-margin: 3em;
+$box-margin: 2em;
+
+.intro > header > h2 {
+	background-color: $color-3;
+	width: 38vw;
+	padding-left: $side-margin;
+}
+
+.summary {
+	margin: 1em;
+	background-color: $color-2;
+	padding: $box-margin;
+}
+
+.preamble {
+	padding: $box-margin;
+	padding-left: $side-margin;
+}
+
+.explanation {
+	background-color: $color-1;
+	padding: $box-margin;
+	width: 26vw;
+	margin-top: 25vw;
+	margin-left: 10vw;
+}
+
+.participation {
+	background-color: $color-1;
+	opacity: 0.7;
+	margin-top: 30vh;
+	padding: $box-margin;
+	padding-left: $side-margin;
+	height: 70vh;
+}
+.benefits {
+	padding: 1em;
+	position: relative;
+	top: 60%;
+	right: 0px;
+	background-color: $color-2;
+	height: 38%;
+	padding: $box-margin;
+	z-index: -1;
+	width: 40vw;
+}
+.requirements {
+	background-color: $color-1;
+	padding: $box-margin;
+	padding-left: $side-margin;
+	height: 100vh;
+}
+
+.sidebar,
+footer {
+	background-color: $color-4;
+	padding: $box-margin;
+	padding-left: $side-margin;
 }
 
 // NAV

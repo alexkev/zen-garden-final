@@ -4,26 +4,170 @@
 /* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+/*************************************************
+*
+* 					AUTHORS 
+* Erik Martinez - https://github.com/erikjmartinez
+* Alex - http://github.com/alexkev
+* Kelsie - https://github.com/kellodust
+*
+**************************************************/
 /* basic elements */
-.extra6 {
-  content: url("https://images.unsplash.com/photo-1451186859696-371d9477be93?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=793b5d1d4707b9d5685bb15e8a99467e");
-  position: fixed;
+.extra1,
+.extra2 {
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+}
+
+.extra1 {
+  background-color: #eafbea;
+  top: 0;
+}
+
+.extra2 {
+  background-color: #ea5e5e;
+  top: 100vh;
+}
+
+.extra3 {
+  position: absolute;
+  left: 0;
+  top: 200vh;
+  content: url("../assets/background3.png");
   z-index: -2;
 }
 
-.extra5 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 600vh;
-  z-index: -1;
-  background: linear-gradient(rgba(255, 255, 255, 0), white 50%);
+.extra4,
+.extra5,
+.extra6 {
+  width: 0;
+  height: 0;
+  background-color: aqua;
 }
 
 html,
-body {
-  margin: 0;
-  padding: 0;
+body,
+.page-wrapper {
+  margin: 0px;
+  padding: 0px;
+}
+
+.intro,
+.intro > header,
+.main {
+  display: contents;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-areas: ". title title" "subtitle subtitle subtitle" ". summary summary" "preamble  explanation explanation" "preamble  explanation explanation" ". explanation explanation" "participation benefits benefits" "participation benefits benefits" "participation benefits benefits" "requirements requirements sidebar" "requirements requirements sidebar" "requirements requirements footer";
+}
+
+.intro > header > h1 {
+  grid-area: title;
+  height: calc(15vh - 2em);
+}
+
+.intro > header > h2 {
+  grid-area: subtitle;
+  height: calc(15vh - 2em);
+}
+
+.summary {
+  grid-area: summary;
+  height: calc(70vh - 4em);
+}
+
+.preamble {
+  grid-area: preamble;
+}
+
+.explanation {
+  grid-area: explanation;
+}
+
+.participation {
+  grid-area: participation;
+}
+
+.benefits {
+  grid-area: benefits;
+}
+
+.requirements {
+  grid-area: requirements;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.intro > header > h2 {
+  background-color: #ea5e5e;
+  width: 38vw;
+  padding-left: 3em;
+}
+
+.summary {
+  margin: 1em;
+  background-color: #6f9a8d;
+  padding: 2em;
+}
+
+.preamble {
+  padding: 2em;
+  padding-left: 3em;
+}
+
+.explanation {
+  background-color: #1f6650;
+  padding: 2em;
+  width: 26vw;
+  margin-top: 25vw;
+  margin-left: 10vw;
+}
+
+.participation {
+  background-color: #1f6650;
+  opacity: 0.7;
+  margin-top: 30vh;
+  padding: 2em;
+  padding-left: 3em;
+  height: 70vh;
+}
+
+.benefits {
+  padding: 1em;
+  position: relative;
+  top: 60%;
+  right: 0px;
+  background-color: #6f9a8d;
+  height: 38%;
+  padding: 2em;
+  z-index: -1;
+  width: 40vw;
+}
+
+.requirements {
+  background-color: #1f6650;
+  padding: 2em;
+  padding-left: 3em;
+  height: 100vh;
+}
+
+.sidebar,
+footer {
+  background-color: #eafbea;
+  padding: 2em;
+  padding-left: 3em;
 }
 
 /*# sourceMappingURL=style.css.map */
