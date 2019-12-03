@@ -143,8 +143,7 @@ footer {
 }
 
 .participation {
-  background-color: #1f6650;
-  opacity: 0.7;
+  background: rgba(31, 102, 80, 0.7);
   margin-top: 30vh;
   padding: 2em;
   padding-left: 3em;
