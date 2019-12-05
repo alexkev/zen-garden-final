@@ -55,15 +55,16 @@ body,
 
 .intro > header > h1 {
 	grid-area: title;
-	height: calc(15vh - 2em);
+	height: 5vh;
 }
 .intro > header > h2 {
 	grid-area: subtitle;
-	height: calc(15vh - 2em);
+	height: 8vh;
 }
+
 .summary {
 	grid-area: summary;
-	height: calc(70vh - 5em);
+	height: 87vh;
 }
 .preamble {
 	grid-area: preamble;
@@ -94,14 +95,13 @@ $box-margin: 2em;
 .intro > header > h2 {
 	background-color: $color-3;
 	width: 50vw;
-	height: 10vh;
 	padding-left: $side-margin;
 }
 
 .summary {
 	margin: 1em;
 	width: 45vw;
-	height: 55vh;
+	height: 45vh;
 	background-color: $color-2;
 	padding: $box-margin;
 }
@@ -110,22 +110,27 @@ $box-margin: 2em;
 	padding: $box-margin;
 	padding-left: $side-margin;
 	max-width: 500px;
+	margin-top: 5em;
 }
 
 .explanation {
 	background-color: $color-1;
 	padding: $box-margin;
-	width: 20vw;
+	width: 25vw;
 	margin-top: 15vw;
 	margin-left: 5vw;
 }
 
 .participation {
 	background: rgba(31, 102, 80, 0.7);
-	margin-top: 30vh;
+	margin-top: 20vh;
 	padding: $box-margin;
 	padding-left: $side-margin;
-	height: 70vh;
+	height: 80vh;
+	@media screen and (min-width: 800px) {
+		margin-top: 10vh;
+		height: 90vh;
+	}
 }
 .benefits {
 	padding: 1em;
@@ -142,7 +147,6 @@ $box-margin: 2em;
 	background-color: $color-1;
 	padding: $box-margin;
 	padding-left: $side-margin;
-	height: 100vh;
 }
 
 .sidebar,
