@@ -50,13 +50,14 @@ body,
 		'participation benefits benefits'
 		'requirements requirements sidebar'
 		'requirements requirements sidebar'
-		'requirements requirements footer';
+		'requirements requirements sidebar';
 }
 
 .intro > header > h1 {
 	grid-area: title;
 	height: 5vh;
 }
+
 .intro > header > h2 {
 	grid-area: subtitle;
 	height: 8vh;
@@ -66,26 +67,36 @@ body,
 	grid-area: summary;
 	height: 87vh;
 }
+
 .preamble {
 	grid-area: preamble;
 }
+
 .explanation {
 	grid-area: explanation;
+	// height: 100vh;
 }
+
 .participation {
 	grid-area: participation;
+	// height: 100vh;
 }
+
 .benefits {
 	grid-area: benefits;
 }
+
 .requirements {
 	grid-area: requirements;
 }
+
 .sidebar {
 	grid-area: sidebar;
+	position: relative;
 }
+
 footer {
-	grid-area: footer;
+	display: none;
 }
 
 // postion
@@ -127,11 +138,13 @@ $box-margin: 2em;
 	padding: $box-margin;
 	padding-left: $side-margin;
 	height: 80vh;
-	@media screen and (min-width: 800px) {
+
+	@media screen and (max-width: 800px) {
 		margin-top: 10vh;
 		height: 90vh;
 	}
 }
+
 .benefits {
 	padding: 1em;
 	position: relative;
@@ -143,6 +156,7 @@ $box-margin: 2em;
 	z-index: -1;
 	width: 40vw;
 }
+
 .requirements {
 	background-color: $color-1;
 	padding: $box-margin;
@@ -156,30 +170,128 @@ footer {
 	padding-left: $side-margin;
 }
 
-// NAV
-// Should be at
-// the bottom for mobile
-// nav ul {
-// 	display: grid;
-// 	grid-template-columns: 1fr 1fr;
-// 	list-style: none;
-// 	padding-left: 0;
-
-// 	li {
-// 		padding: 10px;
-
-// 		a {
-// 			text-decoration: none;
-
-// 			&:nth-child(1)::after {
-// 				content: "\A";
-// 				white-space: pre;
-// 			}
-// 		}
-// 	}
-
-// }
-
-// NOT MOBILE - 770px or higher
-@media screen and (min-width: 770px) {
+.requirements h3,
+.select {
+	color: $color-3;
 }
+
+.requirements h3 {
+	margin-bottom: 5px;
+}
+
+.select {
+	text-align: center;
+}
+
+.archives,
+.resources {
+	display: none;
+}
+
+.design-selection {
+	padding-bottom: 30px;
+
+	nav ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		list-style: none;
+		padding-left: 0;
+
+		@media only screen and (min-width: 750px) and (max-width: 970px) {
+			grid-template-columns: 1fr;
+		}
+
+		li {
+			padding: 10px;
+			margin: 5px 0;
+			font-size: 0.8em;
+
+			a {
+				text-decoration: none;
+
+				&:nth-child(1)::after {
+					content: '\A';
+					white-space: pre;
+				}
+			}
+		}
+	}
+}
+
+.next,
+.viewall,
+.view-css,
+.css-resources,
+.zen-faq,
+.zen-submit,
+.zen-translations {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	padding: 1.2em 0;
+	text-align: center;
+
+	a {
+		opacity: 0;
+	}
+}
+
+.design-archives,
+.zen-resources {
+	padding: 10px;
+
+	ul {
+		padding: 0;
+		display: grid;
+		// flex-direction: row;
+		// justify-content: center;
+	}
+}
+
+.design-archives ul {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.zen-resources ul {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.next {
+	background-image: url(../assets/icons/btn-arrow.svg);
+	background-size: 50px;
+	justify-self: end;
+}
+
+.viewall {
+	background-image: url(../assets/icons/btn-view-all.svg);
+	background-size: 50px;
+	justify-self: start;
+}
+
+.view-css {
+	background-image: url(../assets/icons/btn-css-icon.svg);
+	background-size: 50px;
+}
+
+.css-resources {
+	background-image: url(../assets/icons/btn-info.svg);
+	background-size: 50px;
+}
+
+.zen-faq {
+	background-image: url(../assets/icons/btn-faq.svg);
+	background-size: 50px;
+	padding: 25px;
+}
+
+.zen-submit {
+	background-image: url(../assets/icons/btn-paper-airplane.svg);
+	background-size: 50px;
+}
+
+.zen-translations {
+	background-image: url(../assets/icons/btn-translation.svg);
+	background-size: 50px;
+}
+
+@import 'partials/_mobile.scss';
