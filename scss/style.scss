@@ -29,7 +29,7 @@ body,
 }
 
 .intro,
-.intro > header,
+.intro>header,
 .main {
 	display: contents;
 }
@@ -53,12 +53,12 @@ body,
 		'requirements requirements sidebar';
 }
 
-.intro > header > h1 {
+.intro>header>h1 {
 	grid-area: title;
 	height: 5vh;
 }
 
-.intro > header > h2 {
+.intro>header>h2 {
 	grid-area: subtitle;
 	height: 8vh;
 }
@@ -103,7 +103,7 @@ footer {
 $side-margin: 3em;
 $box-margin: 2em;
 
-.intro > header > h2 {
+.intro>header>h2 {
 	background-color: $color-3;
 	width: 50vw;
 	padding-left: $side-margin;
@@ -228,11 +228,14 @@ footer {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: contain;
-	padding: 1.2em 0;
+	padding: 18px;
 	text-align: center;
 
 	a {
 		opacity: 0;
+		display: block;
+		width: 62px;
+		overflow: hidden;
 	}
 }
 
@@ -242,18 +245,21 @@ footer {
 
 	ul {
 		padding: 0;
-		display: grid;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		// display: grid;
 		// flex-direction: row;
 		// justify-content: center;
 	}
 }
 
 .design-archives ul {
-	grid-template-columns: repeat(2, 1fr);
+	// grid-template-columns: repeat(2, 1fr);
 }
 
 .zen-resources ul {
-	grid-template-columns: repeat(5, 1fr);
+	// grid-template-columns: repeat(5, 1fr);
 }
 
 .next {
@@ -281,7 +287,6 @@ footer {
 .zen-faq {
 	background-image: url(../assets/icons/btn-faq.svg);
 	background-size: 50px;
-	padding: 25px;
 }
 
 .zen-submit {

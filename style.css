@@ -354,7 +354,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  padding: 1.2em 0;
+  padding: 18px;
   text-align: center;
 }
 .next a,
@@ -365,6 +365,9 @@ footer {
 .zen-submit a,
 .zen-translations a {
   opacity: 0;
+  display: block;
+  width: 62px;
+  overflow: hidden;
 }
 
 .design-archives,
@@ -374,15 +377,9 @@ footer {
 .design-archives ul,
 .zen-resources ul {
   padding: 0;
-  display: grid;
-}
-
-.design-archives ul {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.zen-resources ul {
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .next {
@@ -410,7 +407,6 @@ footer {
 .zen-faq {
   background-image: url(../assets/icons/btn-faq.svg);
   background-size: 50px;
-  padding: 25px;
 }
 
 .zen-submit {
